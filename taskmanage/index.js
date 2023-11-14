@@ -29,7 +29,8 @@ mongoose.connect("mongodb://0.0.0.0:27017/task").then(()=>{
         } catch (err) {
         res.status(500).json({ message: err.message });
         }})
-        app.put('/:id', async (req, res) => {
+    //update task
+    app.put('/:id', async (req, res) => {
 
             try{
                 const task = await Task.findById(req.params.id);
