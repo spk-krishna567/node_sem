@@ -12,7 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB (make sure you have MongoDB installed and running)
-mongoose.connect('mongodb://localhost:27017/mern_auth_app', {
+mongoose.connect('mongodb+srv://uma:uma@nodebb.7oqvou7.mongodb.net/login', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
