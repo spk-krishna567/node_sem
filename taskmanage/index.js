@@ -6,7 +6,7 @@ const Task=require('./modeltask.js');
 
 mongoose.connect("mongodb://0.0.0.0:27017/task").then(()=>{
 
-    //get tasks
+    //post tasks
 
     app.post('/new-task',async(req,res)=>{
         const task=new Task({
@@ -21,7 +21,7 @@ mongoose.connect("mongodb://0.0.0.0:27017/task").then(()=>{
             res.status(400).json({message:err.message})
         }
     })
-
+    //get tasks
     app.get('/', async (req, res) => {
         try {
         const tasks = await Task.find();
