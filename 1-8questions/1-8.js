@@ -143,3 +143,15 @@ res.send('Access granted to the secure route');
 app.listen(3000, (req,res) => {
 console.log('Server is running on port 3000');
 })
+
+
+var fs=require('fs');
+fs.writeFile("write.txt","console.log('done')",function(err){
+console.log("helloo world");
+})
+
+fs.readFile("write.txt","utf-8",function(err,data){
+console.log(data);
+
+fs.readFile("write.txt","utf-8",function(err,data){
+    console.log(data);
